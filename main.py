@@ -10,7 +10,6 @@ import threading
 from flask import Flask
 import time
 from discord.ui import View, Button, Select, Modal
-import aiofiles
 
 # Constants
 TOKEN = 'your_token_here'  # Output this name
@@ -304,6 +303,7 @@ async def dm_role(ctx, role: discord.Role, *, message=''):
         except:
             pass
 await ctx.reply(f'DM sent to {success}/{len(role.members)}', ephemeral=True)
+
 
 class VoteModal(Modal):
     title = 'Session Vote - Votes Needed'
